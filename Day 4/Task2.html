@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
+<body>
+    <Div align="center">
+        <h1><U>REGISTRATION FORM</U></h1>
+
+    </Div>
+        <h2>PERSONAL INFORMATION: </h2>
+    <form action="action_page.php" method="get">
+        <div>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Keerthi" required>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Ranjith" required>
+        </div> 
+        <br>
+        <div>
+            <label for="bdate">Date of Brith:</label>
+            <input type="date" id="bdate" name="bdate" required>
+            <label for="age">Age:</label>
+            <input type="age" id="age" name="age" placeholder="23 years">
+
+        </div>
+        <br>
+        <div>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="gender" name="gender">Male
+            <input type="radio" name="gender" id="gender">Female
+        </div>
+        <br>
+        <div>
+            <label for="status">Marital Status:</label>
+            <input type="radio" name="status" id="status">single
+            <input type="radio" name="status" id="status">Married
+        </div>
+        <br>
+        <div>
+            <label for="nationality"> Nationality:</label>
+            <input type="text" name="nationality" id="nationality">
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion">
+        </div>
+        <br>
+        <div>
+            <label for="id no">Aadhaar no:</label>
+            <input type="text" id="id no" name="id no" placeholder="3664 3564 3568">
+        </div>
+        <br>
+        <hr>
+         
+             <h2>CONTACT  INFORMATION:</h2>
+        <br>     
+        <div>
+            <label for="email">Email id:</label>
+            <input type="email" id="email" name="email" placeholder="keerthiranjith81@gmail.com" required>
+            <label for="phone">Phone no :</label>
+            <input type="tel" id="phone" name="phone" placeholder="(+91)6383885006" required>
+        </div> 
+        <br>
+        <div>
+            <label for="address">Address:</label>
+            <input type="address" id="address" name="address" placeholder="Door no - 263">
+            <label for="street">Street name:</label>
+            <input type="street" id="street" name="street" placeholder="Anna nagar">
+           
+        </div>
+        <br>
+        <div>
+            <label for="city">City:</label>
+            <input type="city" id="city" name="city" placeholder="chennai">
+            <label for="state">State:</label>
+            <input type="text" name="state" id="state">
+            <label for="pincode">Pincode:</label>
+            <input type="pincode" id="pincode" name="pincode" placeholder="600037">
+        </div>
+        <br>
+        <hr>
+            <h2>COURSE INFORMATION:</h2>
+        <div>
+            <label for="qualification"> Higher Qualification:</label>
+            <input type="text" id="qualification" name="qualifiaction" placeholder="B.Sc.Chemistry" required> 
+            <label for="passedout year">Year of passedout:</label>
+            <input type="text" id="passedout year" name="passedout year" placeholder="2023" required>
+        </div>
+        <br>
+        <div>
+          <label for="course">Select Course:</label>
+          <select name="course" id="course">
+            <option value="Frontend Development">Frontend Development</option>
+            <option value="Backend Development">Backend Development</option>
+            <option value="React Development">React Development</option>
+            <option value="Full stack Development">Full stack Development</option>
+          </select>
+
+          <label for="mode">Course mode:</label>
+          <input type="radio" id="mode" name="mode">online
+          <input type="radio" name="mode" id="mode">Offline
+        </div>
+        <br>
+        <div>
+            <label for="payment">Mode Of Payment:</label>
+            <input type="radio" id="payment" name="paymernt">Cash
+            <input type="radio" name="payment" id="payment">Debit Card
+            <input type="radio" name="payment" id="payment">Credit Card
+        </div>
+        <br>
+        <hr>
+    
+        <div align="right">
+            <input type="reset" id="reset" name="reset">
+            <input type="submit" name="submit" id="submit">
+            
+        </div>
+         <div align="center">
+            <a href="https://www.slainstitute.com/all-courses/" target="_blank">https://www.slainstitute.com/all-courses/</a>
+        </div>
+
+    </form>
+
+</body>
+</html>
