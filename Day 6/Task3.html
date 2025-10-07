@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+</head>
+
+<body>
+    <Div align="center">
+        <h1><U>REGISTRATION FORM</U></h1>
+
+    </Div>
+    
+    <form action="action_page.php" method="get">
+
+        <label for="fname">Full name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter you full name" required>
+        
+
+        <br><br>
+
+        <label for="bdate">Date of Brith:</label>
+        <input type="date" id="bdate" name="bdate" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="23 years">
+
+
+        <br><br>
+
+        <label>Gender : </label>
+        <input type="radio" name="gender" id="male" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female" required>
+        <label for="female">Female</label>
+
+        <br><br>
+
+        <label for="email">Email id:</label>
+        <input type="email" id="email" name="email" placeholder="keerthiranjith81@gmail.com" required>
+
+        <br><br>
+
+        <label for="phone">Phone no :</label>
+        <input type="number" id="phone" name="phone" placeholder="6383885006" required>
+
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" rows="5" cols="40" placeholder=" Enter your address here..." required></textarea>
+        
+        <br><br>
+
+
+        <label>Skills : </label>
+        <input type="checkbox" name="skills" id="skills" value="HTML">
+        <label for="HTML">HTML</label>
+        <input type="checkbox" name="skills" id="skills" value="CSS">
+        <label for="CSS">CSS</label>
+        <input type="checkbox" name="skills" id="skills" value="Javascript">
+        <label for="Javascript">Javascript</label>
+        <input type="checkbox" name="skills" id="skills" value="Python">
+        <label for="Python">Python</label>
+
+        <br><br>
+
+        <label for="course">Select Course:</label>
+        <select name="course" id="course" required>
+            <option value="">----select----</option>
+            <option value="Frontend Development">Frontend Development</option>
+            <option value="Backend Development">Backend Development</option>
+            <option value="React Development">React Development</option>
+            <option value="Full stack Development">Full stack Development</option>
+        </select>
+
+        <br><br>
+        <hr>
+
+    <div align="right">
+        <input type="reset" value="reset">
+        <input type="submit" value="submit">
+    </div>   
+
+    </form>
+
+</body>
+
+</html>

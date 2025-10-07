@@ -4,85 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Basic Form</title>
 </head>
 
 <body>
-    <h1>Registration form</h1>
+    <center>
+        <h1>Personal Information Form</h1>
 
-    <form action="" method="">
-        <fieldset>
-            <legend><strong>Personal information</strong></legend>
+    </center>
+    <hr>
 
-            <label for="fullname">Full Name : </label>
-            <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
-            <br><br>
-            <label for="email">Email : </label>
-            <input type="email" name="email" id="name" placeholder="keerthi42@gmail.com" required>
-            <br><br>
-            <label for="password">Password : </label>
-            <input type="password" id="password" name="password" placeholder="Enter a secure password" required min="5"
-                maxlength="20">
-            <br><br>
+    <form action="register.php" method="post">
 
-            <label for="dob">DOB : </label>
-            <input type="date" name="dob" id="dob" required>
-            <br><br>
-            <label>Gender : </label>
-            <input type="radio" name="gender" id="male" value="Male" required>
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="female" value="Female" required>
-            <label for="female">Female</label>
-            <br><br>
-            <label for="resume">Upload resume : </label>
-            <input type="file" name="resume" id="resume" accept=".pdf,.docx" required>
-        </fieldset>
+        <label for="fname">First name:</label>
+        <input type="text" name="fname">
+        <br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" name="lname">
+        <br><br>
+        <label for="age">Age :</label>
+        <input type="number" name="age">
+        <br><br>
+        <label for="dob">DOB : </label>
+        <input type="date" name="dob">
+        <br><br>
+        <label for="phone">Phone No : </label>
+        <input type="tel" name="phone">
+        <br><br>
+        <label for="address">Address : </label>
+        <textarea name="address" rows="4" cols="30"></textarea>
+        <br><br>
         <hr>
-        <fieldset>
-            <legend><strong>Preference & interest</strong></legend>
-            <label for="country">Select your country : </label>
-            <select name="country" id="country">
-                <option value="">----select----</option>
-                <option value="usa">USA</option>
-                <option value="india">India</option>
-                <option value="china">China</option>
-            </select>
-            <p>Choose your interest : </p>
-            <input type="checkbox" name="interest" id="coding" value="Coding">
-            <label for="coding">Coding</label>
-            <input type="checkbox" name="interest" id="music" value="Music">
-            <label for="music">Music</label>
-            <input type="checkbox" name="interest" id="dance" value="Dance">
-            <label for="dance">Dance</label>
-            <br><br>
-            <label for="experience">Experience : </label>
-            <input type="range" name="experience" id="experience" min="0" max="10"
-                oninput="experienceoutput.value=experience.value">
-            <output id="experienceOutput">5</output>
+        <div align="right">
+            <input type="reset" value="reset">
+            <input type="submit" value="submit">
 
-        </fieldset>
-        <hr>
-        <fieldset>
-            <legend><strong>Comments or suggestions</strong></legend>
-            <textarea name="Comments" id="com" rows="5" placeholder="your Comments or suggestions here..."></textarea><br>
-
-            <label for="rating">Rate your experience:</label>
-            <input type="number" id="rating" name="rating" min="1" max="5">
-
-            <br><br>
-            <input type="checkbox" id="newsletter" name="newsletter" checked>
-            <label for="newsletter">Subscribe to our newsletter</label>
-        </fieldset>
-
-        <fieldset>
-            <legend>Form Action</legend>
-            <input type="reset" value="Reset Form">
-            <input type="submit" value="Submit Form">
-                
-        </fieldset>
+        </div>
 
 
     </form>
+
 </body>
 
 </html>
