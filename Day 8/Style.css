@@ -1,0 +1,11 @@
+.bcd{
+    color: black;
+    background-color: lightslategray;
+    border-style: dotted;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+body{
+    background-color: lightblue;
+}
