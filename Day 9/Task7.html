@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .plan {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .basic {
+            border: 3px solid skyblue; 
+        }
+
+        .standard {
+            border: 3px dashed lightgreen; 
+        }
+
+        .premium {
+            border: 3px double red; 
+        }
+
+        .plan h2 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .price {
+            font-size: 24px;
+            color: black;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            color: gray;
+        }
+
+        li {
+            margin: 8px ;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px ;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>Our Pricing Plans</h1>
+
+    <div class="pricing-table">
+        <div class="plan basic">
+            <h2>Basic</h2>
+            <p class="price">499 / month</p>
+            <ul>
+                <li>✔ 5 Projects</li>
+                <li>✔ 10GB Storage</li>
+                <li>✔ Email Support</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="plan standard">
+            <h2>Standard</h2>
+            <p class="price">699 / month</p>
+            <ul>
+                <li>✔ 20 Projects</li>
+                <li>✔ 50GB Storage</li>
+                <li>✔ Priority Support</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+
+        <div class="plan premium">
+            <h2>Premium</h2>
+            <p class="price">999 / month</p>
+            <ul>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 200GB Storage</li>
+                <li>✔ 24/7 Support</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+    </div>
+</body>
+</html>

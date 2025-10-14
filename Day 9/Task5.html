@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Experiment</title>
+    <style>
+        body {
+            background-color: lavender;
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            height: 200px;
+            padding: 30px;
+            border: 10px solid darkmagenta;
+            color: black;
+            text-align: center;
+            margin: 30px;
+    
+        }
+
+        .content-box {
+            background-color: lightcoral;
+            box-sizing: content-box;
+            
+        }
+
+        .border-box {
+            background-color: lightsalmon;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box-Sizing: Content-Box vs Border-Box</h1>
+
+        <div class="box content-box">
+            box-sizing: content-box (default)
+            The width and height apply only to the content area. Padding and borders are added on top, making the total
+            box size larger.
+            So, total width = content + padding + border
+        </div>
+
+        <div class="box border-box">
+            box-sizing: border-box
+            The width and height include padding and border. The total size stays fixed, and the content area shrinks to
+            make room for padding and border.
+            So, total width = declared width.
+        </div>
+
+       <p>Both boxes have the same width (600px), padding (30px), and border (10px),  
+       but notice <b>content-box</b> is larger because the padding and border are added 
+       on top of the set width and height.<b>Border-box</b> keeps the total size fixed at 600px by including the padding and border inside it.</p>
+
+</body>
+
+</html>
