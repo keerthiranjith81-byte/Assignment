@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Homepage</title>
 
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -15,6 +15,29 @@
             color: white;
             font-family: 'Poppins', sans-serif;
         }
+
+        nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            margin: 0;
+            gap: 20px;
+        }
+
+        
+
+        
 
         .banner {
             height: 60vh;
@@ -35,7 +58,7 @@
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
             background: rgba(0, 0, 0, 0.3);
             text-transform: uppercase;
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
 
         }
@@ -50,14 +73,14 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
         }
 
-        .box-container{
+        .box-container {
             height: 400px;
             position: relative;
             margin-top: 50px;
 
         }
 
-        .box{
+        .box {
             width: 600px;
             height: 150px;
             color: black;
@@ -69,32 +92,42 @@
             padding: 20px;
         }
 
-        .relative{
+        .relative {
             background-color: blue;
             position: relative;
             top: 30px;
             left: 30px;
-            
+
         }
 
-        .absolute{
+        .absolute {
             background-color: violet;
             position: absolute;
             top: 100px;
             right: 50px;
         }
 
-        .fixed{
+        .fixed {
             background-color: darkorchid;
             position: fixed;
             bottom: 0;
-            
+
         }
     </style>
 
 </head>
 
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
 
 
     <section class="banner">
@@ -107,9 +140,12 @@
         <p>Experimenting with text shadows, transformations, and positioning in CSS.</p>
 
         <div class="box-container">
-            <div class="box relative">Relative-When an element is given a relative position, it stays in the normal flow but can be moved slightly from its original place using top, left, right, or bottom values</div>
-            <div class="box absolute">Absolute-An absolute position removes the element from the normal flow and places it exactly where you want inside its nearest positioned parent element.</div>
-            <div class="box fixed">Fixed-A fixed position keeps the element in the same place on the screen even when you scroll — for example, a fixed navigation bar or a chat icon.</div>
+            <div class="box relative">Relative-When an element is given a relative position, it stays in the normal flow
+                but can be moved slightly from its original place using top, left, right, or bottom values</div>
+            <div class="box absolute">Absolute-An absolute position removes the element from the normal flow and places
+                it exactly where you want inside its nearest positioned parent element.</div>
+            <div class="box fixed">Fixed-A fixed position keeps the element in the same place on the screen even when
+                you scroll — for example, a fixed navigation bar or a chat icon.</div>
         </div>
     </section>
 
