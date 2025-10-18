@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 3-Column Flexbox</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .box {
+            background-color: salmon;
+            color: white;
+             flex: 1 1 calc(33.333% - 20px);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+          
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Responsive Column Layout</h2>
+
+    <div class="container">
+        <div class="box">Deeksha</div>
+        <div class="box">Johith</div>
+        <div class="box">Kanishka</div>
+    </div>
+
+</body>
+
+</html>

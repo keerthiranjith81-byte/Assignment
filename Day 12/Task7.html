@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 10px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin: 0;
+            color: black;
+        }
+
+
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Product Grid</h2>
+
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://images.pexels.com/photos/902030/pexels-photo-902030.jpeg">
+            <h3>Product 1</h3>
+            <p>$19.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/1375736/pexels-photo-1375736.jpeg">
+            <h3>Product 2</h3>
+            <p>$24.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/157757/wedding-dresses-fashion-character-bride-157757.jpeg">
+            <h3>Product 3</h3>
+            <p>$29.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/2173357/pexels-photo-2173357.jpeg">
+            <h3>Product 4</h3>
+            <p>$34.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/995978/pexels-photo-995978.jpeg">
+            <h3>Product 5</h3>
+            <p>$39.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/1580271/pexels-photo-1580271.jpeg">
+            <h3>Product 6</h3>
+            <p>$44.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/1148960/pexels-photo-1148960.jpeg">
+            <h3>Product 7</h3>
+            <p>$49.99</p>
+        </div>
+        <div class="product">
+            <img src="https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg">
+            <h3>Product 8</h3>
+            <p>$55.99</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

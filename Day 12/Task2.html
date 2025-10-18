@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Float + Clearfix Example</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .article {
+            background: lightcyan;
+            padding: 20px;
+            margin: 0 auto 24px;
+            border-radius: 8px;
+            max-width: 800px;
+
+        }
+
+        .float-img {
+            float: left;
+            max-width: 220px;
+            margin: 10px;
+            border-radius: 0 12px 12px 0;
+            box-shadow: rgba(20, 20, 20, 0.06);
+
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="article clearfix">
+
+        <img src="https://picsum.photos/id/1025/800/600" alt="Sample image" class="float-img" />
+
+
+        <h2>Floating an image beside text</h2>
+        <p>
+            When an image is floated beside text using the CSS property float, it allows the text to wrap naturally
+            around the image, creating a clean and magazine-style layout. However, floating an element takes it out of
+            the normal document flow, which can cause the parent container's height to collapse. To fix this, a
+            technique called clearfix is used. The clearfix adds a hidden element after the floated items to clear the
+            float and make the parent container expand properly. This method helps maintain the overall layout structure
+            while keeping the image and text neatly aligned.
+        </p>
+        <p> When children inside a container are floated, the parent's height may collapse because floats are taken out
+            of normal flow. The clearfix (using <code>::after</code>) creates an invisible block after the children and clears the
+            floats so the parent expands to contain them.</p>
+        <p>
+            float: left (or right) takes the image out of normal flow and lets inline content wrap around it. When
+            children are floated, the parent's height can collapse (because floats are taken out of the normal
+            flow). The clearfix forces the parent to contain those floats by adding an invisible block after the
+            children that clears the float. The clearfix used here is the well-known ::after technique.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

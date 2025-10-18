@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property.</title>
+    <style>
+        body {
+            background-color: lightsalmon;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .example {
+            background-color: lightcyan;
+            margin-bottom: 30px;
+            border: 3px dashed darkblue;
+            padding: 20px;
+
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 10px;
+            border: 3px solid brown;
+
+        }
+
+        .block {
+            display: block;
+            margin: 10px;
+        }
+
+        .inline {
+            display: inline;
+            margin: 10px;
+        }
+
+        .inline-block{
+            display: inline-block;
+            height: 60px;
+            margin: 10px;
+           
+        }
+
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Display Property.</h1>
+
+    <div class="example">
+        <h3> 1️⃣ Display;Block</h3>
+        <div class="box block">Always start on a new line.</div>
+        <div class="box block">Occupy the entire width of the container (even if content is smaller).</div>
+        <div class="box block">You can set width, height, margin, and padding.</div>
+    </div>
+
+    <div class="example">
+        <h3> 2️⃣ Display;Inline</h3>
+        <div class="box inline">Don't start on a new line.</div>
+        <div class="box inline">You can't set width or height.</div>
+        <div class="box inline">You can use padding and margin, but they affect layout differently (especially vertical
+            ones).</div>
+    </div>
+
+    <div class="example">
+        <h3> 3️⃣ Display;Inlne-block</h3>
+        <div class="box inline-block">Does not start on a new line (like inline).</div>
+        <div class="box inline-block">Can have width and height (like block).</div>
+        <div class="box inline-block">Very useful for creating button-like elements or layouts in a line.</div>
+    </div>
+
+    <div class="example">
+        <h3> 4️⃣ Display;None</h3>
+        <div class="box none">It's not visible and takes up no space.</div>
+        <div class="box inline-block">Often used to hide elements temporarily with JavaScript or CSS.</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2x2 Grid Layout</title>
+  <style>
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        padding: 20px;
+        background-color: gray;
+        border-radius: 5px;
+        height: 100vh;
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        background-color: salmon;
+        border-radius: 10px;
+        font-size: 24px;
+        color: white;
+
+    }
+   
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">Keerthi</div>
+    <div class="box">Aarthi</div>
+    <div class="box">Kavibalan</div>
+    <div class="box">Rajesh</div>
+  </div>
+
+</body>
+</html>
