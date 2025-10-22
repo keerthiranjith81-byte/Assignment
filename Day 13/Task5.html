@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #3498db;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; 
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .box p {
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (min-width: 800px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Services</h1>
+    <p>Flexible layout using Flexbox & min-width queries</p>
+  </header>
+
+  <div class="container">
+    <div class="box">
+      <h2>Web Development</h2>
+      <p>We build responsive, fast, and modern websites tailored to your business needs. From design to deployment, we cover everything.</p>
+    </div>
+    <div class="box">
+      <h2>Graphic Design</h2>
+      <p>Our creative team designs eye-catching visuals, logos, and marketing materials that leave a lasting impression.</p>
+    </div>
+    <div class="box">
+      <h2>SEO & Marketing</h2>
+      <p>Optimize your online presence with our SEO and digital marketing strategies. Increase traffic, engagement, and conversions effectively.</p>
+    </div>
+  </div>
+
+</body>
+</html>

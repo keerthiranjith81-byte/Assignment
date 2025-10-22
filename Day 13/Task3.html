@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>em vs rem Example</title>
+  <style>
+    html {
+      font-size: 16px; /* 1rem = 16px */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .box {
+      border: 2px solid gray;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    
+    .em-box {
+      font-size: 1em; 
+    }
+
+    .em-box p {
+      font-size: 1.5em; 
+    }
+
+    
+    .rem-box {
+      font-size: 1em;
+    }
+
+    .rem-box p {
+      font-size: 1.5rem; 
+    }
+
+    .em-box .nested {
+      font-size: 1.5em; 
+    }
+
+    .rem-box .nested {
+      font-size: 1.5rem; 
+    }
+  </style>
+</head>
+<body>
+  <div class="box em-box">
+    <h2>Using <code>em</code> Units</h2>
+    <p>This text is 1.5em (24px).</p>
+    <div class="nested">This nested text grows larger (36px).</div>
+  </div>
+
+  <div class="box rem-box">
+    <h2>Using <code>rem</code> Units</h2>
+    <p>This text is 1.5rem (24px).</p>
+    <div class="nested">This nested text stays the same size (24px).</div>
+  </div>
+</body>
+</html>

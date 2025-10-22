@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Column to One Column Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .left {
+      background-color: lightblue;
+    }
+
+    .right {
+      background-color: lightgreen;
+    }
+
+    
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column left">
+      <h2>Left Column</h2>
+      <p>This is the left side of the layout.</p>
+    </div>
+    <div class="column right">
+      <h2>Right Column</h2>
+      <p>This is the right side of the layout.</p>
+    </div>
+  </div>
+</body>
+</html>

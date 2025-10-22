@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Background Change</title>
+  <style>
+    body {
+      background-color: lightblue; 
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    
+    @media (min-width: 600px) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+
+    
+    @media (min-width: 900px) {
+      body {
+        background-color: lightcoral;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Resize the browser window!</h1>
+  <p>The background color changes at 600px and 900px.</p>
+</body>
+</html>
