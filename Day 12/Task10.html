@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Profile Layout</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  header {
+    grid-area: header;
+    background-color: lightcoral;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: lightblue;
+    padding: 10px;
+  }
+
+  main {
+    grid-area: main;
+    background-color: lightgreen;
+    padding: 10px;
+  }
+
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>My Profile Page</header>
+
+    <div class="sidebar">
+      <p>Menu</p>
+      <p>Settings</p>
+      <p>Logout</p>
+    </div>
+
+    <main>
+      <div class="profile">
+        <img src="https://via.placeholder.com/80" alt="Profile">
+        <div>
+          <h3>Keerthi Ranjith</h3>
+          <p>Web Designer</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
