@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: lightcyan;
+    }
+
+
+    nav {
+      background-color: #333;
+    }
+
+    .nav-links {
+      display: flex;              
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      flex: 1;
+    }
+
+    .nav-links a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      background-color: #575757;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;   
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div style="padding:20px;">
+    <h2>Responsive Navbar Example</h2>
+    <p>Resize the browser window to see the navbar change layout.</p>
+  </div>
+
+</body>
+</html>

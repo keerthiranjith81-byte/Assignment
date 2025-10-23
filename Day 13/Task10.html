@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Hero Section (vh / vw)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .hero {
+      height: 100vh; 
+      width: 100vw;  
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2vw; 
+    }
+
+    .hero h1 {
+      font-size: 5vw;
+      margin-bottom: 1vh;
+    }
+
+    .hero p {
+      font-size: 2vw;
+      max-width: 60vw;
+    }
+
+    .btn {
+      margin-top: 4vh;
+      padding: 1vh 3vw; 
+      background-color: #ffb703;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.5vw;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #ffd166;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Welcome to Our Website</h1>
+    <p>Discover amazing products and services tailored just for you. Resize the window to see this hero section adapt to your screen.</p>
+    <button class="btn">Get Started</button>
+  </section>
+
+</body>
+</html>
