@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Paragraph Text</title>
+</head>
+<style>
+    body {
+        background-color: lightcyan;
+    }
+
+    .container {
+        margin: 10%;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p id="myParagraph">JavaScript (JS) is a powerful and widely used programming language primarily designed for
+            adding interactivity and dynamic behavior to web pages. It runs directly in web browsers, allowing
+            developers to create features like animations, form validations, pop-ups, and interactive content.</p>
+
+        <button onclick="changeText()">Change Text</button>
+
+        <script>
+            function changeText() {
+                document.getElementById("myParagraph").innerText = "JavaScript works alongside HTML and CSS — where HTML structures a webpage and CSS styles it, JavaScript brings it to life. It’s also used beyond the browser, such as in Node.js for backend development, and in building mobile apps and games.";
+            }
+        </script>
+    </div>
+
+
+</body>
+
+</html>
