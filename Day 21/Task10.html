@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product List</title>
+</head>
+<body>
+  <h2>Product List</h2>
+  <ul id="productList"></ul>
+
+  <script>
+    
+    let products = ["Laptop", "Phone", "Tablet", "Headphones", "Smartwatch"];
+
+    let list = document.getElementById("productList");
+    
+    products.forEach(product => {
+      let item = document.createElement("li");
+      item.textContent = product;
+      list.appendChild(item);
+    });
+  </script>
+</body>
+</html>
