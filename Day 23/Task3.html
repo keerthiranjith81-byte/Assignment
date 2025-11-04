@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appendchild</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Pine apple</li>
+        
+    </ul>
+
+    <script>
+        let list = document.getElementById("fruits")
+
+        let li1 = document.createElement("li");
+        li1.textContent = "Banana";
+        list.appendChild(li1);
+
+        let li2 = document.createElement("li");
+        li2.textContent = "Cherry";
+        list.appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.textContent="Grapes";
+        list.appendChild(li3);
+    </script>
+    
+</body>
+</html>
