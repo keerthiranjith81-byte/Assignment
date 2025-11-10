@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Change with Error Handling</title>
+</head>
+<body>
+
+<p id="text">This text will change color!</p>
+<button onclick="changeColor()">Change Color</button>
+
+<p id="output"></p>
+
+<script>
+  function changeColor() {
+    try {
+      let el = document.getElementById("text");
+
+      if (!el) {
+        throw new Error("Element not found!");
+      }
+
+      el.style.color = "blue";
+      document.getElementById("output").textContent = "Color changed ✔️";
+      document.getElementById("output").style.color = "green";
+
+    } catch(error) {
+      document.getElementById("output").textContent = error.message;
+      document.getElementById("output").style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>

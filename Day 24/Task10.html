@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Login with Error Handling</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Enter username"><br><br>
+  <input type="password" id="password" placeholder="Enter password"><br><br>
+  <button type="submit">Login</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  function validateLogin(username, password) {
+    if (!username || !password) {
+      throw new Error("Both fields are required!");
+    }
+
+    const validUser = "admin";
+    const validPass = "12345";
+
+    if (username !== validUser || password !== validPass) {
+      throw new Error("Invalid username or password!");
+    }
+
+    return "Login successful ✅";
+  }
+
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+      
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value;
+    let msg = document.getElementById("message");
+
+    try {
+      let result = validateLogin(user, pass);
+      msg.textContent = result;
+      msg.style.color = "green";
+    } catch(error) {
+      msg.textContent = error.message;
+      msg.style.color = "red";
+    }
+  });
+</script>
+
+</body>
+</html>

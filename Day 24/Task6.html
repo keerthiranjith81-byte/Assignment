@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation.</title>
+</head>
+
+<body>
+
+    <form id="numberForm">
+        <input type="number" id="numInput" placeholder="Enter a number">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function validateNumber(num) {
+            if (num === "" || isNaN(num)) {
+                throw new Error("Please enter a valid number!");
+            }
+
+            if (num < 0) {
+                throw new Error("Negative numbers are not allowed!");
+            }
+
+            return "Valid number: " + num;
+        }
+
+        document.getElementById("numberForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let input = document.getElementById("numInput").value;
+            let result = document.getElementById("result");
+
+            try {
+                result.textContent = validateNumber(input);
+                result.style.color = "green";
+            } catch (error) {
+                result.textContent = error.message;
+                result.style.color = "red";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
