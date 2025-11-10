@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Error Messages</title>
+</head>
+
+<body>
+
+    <h2>Signup Form</h2>
+
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <button onclick="validateForm()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const msg = document.getElementById("message");
+
+            try {
+
+                if (!name) {
+                    throw new Error("Name cannot be empty!");
+                }
+                if (name.length < 3) {
+                    throw new Error("Name must be at least 3 characters long!");
+                }
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email) {
+                    throw new Error("Email cannot be empty!");
+                }
+                if (!emailPattern.test(email)) {
+                    throw new Error("Please enter a valid email address!");
+                }
+
+                msg.textContent = " Form submitted successfully!";
+                msg.style.color = "green";
+
+            } catch (error) {
+                msg.textContent = error.message;
+                msg.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

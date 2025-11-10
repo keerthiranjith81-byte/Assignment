@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation with try...catch</title>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form id="myForm">
+  <input type="text" id="name" placeholder="Enter name" /><br><br>
+  <input type="email" id="email" placeholder="Enter email" /><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const msg = document.getElementById("message");
+
+    try {
+      if (!name) {
+        throw new Error("Name field is required!");
+      }
+      if (!email) {
+        throw new Error("Email field is required!");
+      }
+
+      msg.textContent = "Form submitted successfully!";
+      msg.style.color = "green";
+
+    } catch (error) {
+      msg.textContent = error.message;
+      msg.style.color = "red";
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combined Error Handling Example</title>
+</head>
+<body>
+
+<input type="number" id="ageInput" placeholder="Enter your age">
+<button onclick="processAge()">Check Age</button>
+
+<p id="output"></p>
+
+<script>
+function validateAge(age) {
+  if (!age) {
+    throw new Error("Age is required!");
+  }
+  if (age < 0) {
+    throw new Error("Age cannot be negative!");
+  }
+  if (age < 18) {
+    throw new Error("You must be at least 18 years old.");
+  }
+  return "✅ Access granted!";
+}
+
+function processAge() {
+  const age = Number(document.getElementById("ageInput").value);
+  const output = document.getElementById("output");
+
+  try {
+    const result = validateAge(age);
+    output.textContent = result;
+    output.style.color = "green";
+  } catch (error) {
+    output.textContent =  error.message;
+    output.style.color = "red";
+  } finally {
+    console.log("Code executed.");
+  }
+}
+</script>
+
+</body>
+</html>
