@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #togglebtn {
+            width: 100px;
+            height: 50px;
+            border: 2px solid black;
+        }
+
+        img{
+            margin: 30px;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <button id="slidebtn">Click to Slide</button>
+    <div>
+        <img src="./IMG_6924-01-02.jpg" width="700px" height="700px ">
+
+    </div>
+    <script>
+        $("#slidebtn").click(function () {
+            $("img").slideToggle(1000);
+        });
+    </script>
+
+</body>
+
+</html>

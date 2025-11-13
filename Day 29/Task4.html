@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text and Color</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <button id="changebtn">Change Text and Color</button>
+    <p style="font-size: 50px;">JQuery-write less Do More</p>
+
+    <script>
+        $("#changebtn").click(function () {
+            $("p").text("The Text and Color has changed after the button clicked.").css("color", "Darkblue")
+        })
+    </script>
+</body>
+
+</html>

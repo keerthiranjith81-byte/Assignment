@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightcyan;
+        }
+        #Hideshow{
+            width: 300px;
+            height: 100px;
+            font-size: 30px;
+            border: 2px solid black;
+        }
+
+        #text{
+            font-size: 100px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<body>
+    <button id="Hideshowbtn">Hide / Show</button>
+
+    <p id="text">To hide and show the paragraph using toggle.</p>
+
+    <script>
+        $("#Hideshowbtn").click(function(){
+            $("#text").fadeToggle(1000);
+        });
+    </script>
+
+</body>
+</html>
