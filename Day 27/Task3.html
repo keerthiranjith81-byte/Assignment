@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function getGitHubData() {
+            try {
+                let response = await fetch("https://api.github.com/users/keerthiranjith81-byte");
+
+                if (!response.ok) {
+                    throw new Error("User not found");
+                }
+
+                let data = await response.json();
+                console.log("Async/Await Data:", data);
+
+            } catch (error) {
+                console.log("Error:", error.message);
+            }
+        }
+
+        getGitHubData();
+    </script>
+
+</body>
+
+</html>

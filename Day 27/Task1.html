@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch("https://api.github.com/users/keerthiranjith81-byte")
+            .then(res => res.json())
+            .then(data => {
+                console.log("GitHub Data:", data);
+            })
+            .catch(err => console.log("Error:", err));
+    </script>
+
+
+</body>
+
+</html>

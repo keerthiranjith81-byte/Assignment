@@ -2,23 +2,19 @@
 <html>
 <body>
 
-<h2>GitHub User Info</h2>
-<div id="output"></div>
+<p id="login"></p>
+<p id="repos"></p>
 
 <script>
 fetch("https://api.github.com/users/keerthiranjith81-byte")
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
-        document.getElementById("output").innerHTML = `
-            <p><b>Username:</b> ${data.login}</p>
-            <p><b>Public Repos:</b> ${data.public_repos}</p>
-        `;
+        document.getElementById("login").textContent = "Login: " + data.login;
+        document.getElementById("repos").textContent = "Public Repos: " + data.public_repos;
     })
-    .catch(error => {
-        document.getElementById("output").innerHTML = "Error loading data.";
-        console.log(error);
-    });
+    .catch(err => console.log("Error:", err));
 </script>
+
 
 </body>
 </html>
