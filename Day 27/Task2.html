@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>GitHub User Info</h2>
+<div id="output"></div>
+
+<script>
+fetch("https://api.github.com/users/keerthiranjith81-byte")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("output").innerHTML = `
+            <p><b>Username:</b> ${data.login}</p>
+            <p><b>Public Repos:</b> ${data.public_repos}</p>
+        `;
+    })
+    .catch(error => {
+        document.getElementById("output").innerHTML = "Error loading data.";
+        console.log(error);
+    });
+</script>
+
+</body>
+</html>
