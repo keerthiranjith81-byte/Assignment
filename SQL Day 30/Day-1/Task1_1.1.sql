@@ -1,4 +1,3 @@
--- question no 6 to 10
 -- Extend the edu_platform database by adding a assignments table.
 create database edu_platform;
 use edu_platform;
