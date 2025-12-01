@@ -18,4 +18,4 @@ begin
  from employees where emp_id=p_id;
 end $$
 delimiter ;
-call pd_emp(2)
+call pd_emp(2);
